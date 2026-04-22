@@ -2,8 +2,6 @@ const inRange = (value, min, max) => {
   return value >= min && value <= max;
 }
 
-// TODO: FIX CHANCES
-
 const rollSlot = () => {
     const symbolID = Math.floor(Math.random() * 100) + 1;
 
