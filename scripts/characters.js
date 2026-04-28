@@ -41,7 +41,7 @@ const character_container = new CharacterContainer();
 
 // load all the story/character/ json files into the character container
 for (const file of character_files) {
-    const response = await fetch("./story/characters/" + file); 
+    const response = await fetch("../resources/jsons/characters/" + file); 
     if (!response.ok) {
         throw new Error(`Error fetching character JSON: ${response.status} ${response.statusText}`);
     }
