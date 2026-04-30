@@ -1,7 +1,7 @@
 const scenes = Object.freeze({
     MAIN_MENU: "main_menu",
     SHOP: "shop"
-    // etc,
+    // etc,nerd
 });
 
 _active_scene = scenes.MAIN_MENU;
@@ -10,7 +10,7 @@ const get_active_scene = () => {
     return _active_scene;
 }
 
-const stats = {
+const player_stats = {
     schizophrenia_level: new numerical_stat(0, 0, 99, () => {
         schizophrenia_level.value = 0;
     },
@@ -41,5 +41,5 @@ const stats = {
 
 export {
     scenes,
-    stats
+    player_stats
 }
