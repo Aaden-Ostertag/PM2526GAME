@@ -1,3 +1,4 @@
+import { dialogue_manager } from "./globals.js";
 import { SceneManager, Scene } from "./scene_manager.js";
 
 
@@ -10,8 +11,8 @@ SceneManager.add_scene(new Scene("Main Menu", () => {
 
 
 SceneManager.add_scene(new Scene("Yahu Intro", async () => {
-    const template_yahu_dialogue = await fetch("../resources/jsons/dialogue/template_yahu_dialogue.json"); 
+    const yahu_dialogue_box = dialogue_manager.get_character("benjamin_netanyahu");
+    const yahu_intro_dialogue = dialogue_manager.get_dialogue("yahu_intro_dialogue");
 
-    const yahu_dialogue = document.querySelector("#yahu_dialogue");
-    await yahu_dialogue.conversation(template_yahu_dialogue);
+    await yahu_dialogue_box.conversation(yahu_intro_dialogue);
 }));
