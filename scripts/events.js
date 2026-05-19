@@ -6,21 +6,6 @@ import { character_container } from "./globals.js";
     Place all event listeners in this file and import their respective things that they will trigger.
 */
 
-
-/*
-
-Add a event listener for each stat in the stats object and make sure the names are the same.
-
-Stat template event listener is below:
-
-document.addEventListener("event_name", (event) => {
-    if (event.detail.value < 0) {
-        console.log("Example");
-    }
-});
-
-*/
-
 for (const stat_name of Object.keys(stats)) {
     document.addEventListener(stat_name, (event) => {
         switch (stat_name) {
