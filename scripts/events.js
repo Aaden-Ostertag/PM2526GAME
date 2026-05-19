@@ -43,13 +43,6 @@ for (const stat_name of stats.keys()) {
                     stats.gambling_anxiety.value = 0;
                 }
                 break;
-            case "netneyau_rage_love":
-                if (event.detail.value <= -100) {
-                    console.log("trigger rage ending");
-                } else if (event.detail.value >= 100) {
-                    console.log("trigger love ending");
-                }
-                break;
         }
     });
 }
