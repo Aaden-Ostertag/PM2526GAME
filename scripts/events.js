@@ -21,7 +21,7 @@ document.addEventListener("event_name", (event) => {
 
 */
 
-for (const stat_name of stats.keys()) {
+for (const stat_name of Object.keys(stats)) {
     document.addEventListener(stat_name, (event) => {
         switch (stat_name) {
             case "money":
